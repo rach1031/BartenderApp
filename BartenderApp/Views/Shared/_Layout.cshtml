@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" asp-href-include="lib/bootstrap/dist/css/*.min.css" />
+    <title>BartenderApp</title>
+    <style>
+        body {
+            background-color: black;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div style="text-align:center;">
+        <a href="@Url.Action("Index", "Home")">
+            <img src="~/images/bar.jpg" alt="Bar" width="950" height="500">
+        </a>"
+    </div>
+
+    <div>
+        @RenderBody()
+        <style>
+            body {
+                background-color: black;
+            }
+        </style>
+    </div>
+</body>
+</html>

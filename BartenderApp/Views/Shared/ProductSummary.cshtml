@@ -1,0 +1,20 @@
+﻿@model Product
+
+
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="~/images/@Model.Picture" alt="DrinkPicture">
+    <div class="card-body">
+        <h5 class="card-title" style="font-family: Geneva">@Model.DrinkName</h5>
+        <p class="card-text" style="font-family: Geneva">@Model.Description</p>
+        <p class="card-text" style="font-family: Geneva">Price:$@Model.Price</p>
+        <form id="@Model.ProductID" asp-action="AddToCart"
+              asp-controller="Cart" method="post" class="float-right m-2 p-1">
+            <input type="hidden" asp-for="ProductID" />
+            <input type="hidden" name="returnUrl"
+                   value="@ViewContext.HttpContext.Request.PathAndQuery()" />
+            <button type="submit" class="btn btn-outline-info btn-sm float-right">
+                Order
+            </button>
+        </form>
+    </div>
+</div>

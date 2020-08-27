@@ -1,0 +1,24 @@
+﻿@model ProductsListViewModel
+
+
+
+    <div class="container">
+        <div class="row">
+            
+            <div class="col px-md-5">
+                <div class="card-deck">
+                    @foreach (var p in Model.Products)
+                    {
+                        @Html.Partial("ProductSummary", p)
+                    }
+
+                </div>
+
+                <div page-model="@Model.PagingInfo" page-action="List" page-classes-enabled="true"
+                     page-class="btn" page-class-normal="btn-default"
+                     page-class-selected="btn-primary" class="btn-group float-right">
+                </div>
+            </div>
+        </div>
+    </div>
+
