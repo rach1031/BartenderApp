@@ -13,6 +13,20 @@ namespace BartenderApp.Controllers
             repository = repoService;
             cart = cartService;
         }
+
+        public ViewResult List() => View(repository.Orders.Where(o => !o.Fulfilled));
+        [HttpPost]
+        public IActionResult MarkFulfilled(int orderID)
+        {
+            Order order = repository.Orders
+            .FirstOrDefault(o => o.OrderID == orderID);
+            if (order != null)
+            {
+                order.Fulfilled = true;
+                repository.SaveOrder(order);
+            }
+            return RedirectToAction(nameof(List));
+        }
         public ViewResult Checkout() => View(new Order());
         [HttpPost]
         public IActionResult Checkout(Order order)

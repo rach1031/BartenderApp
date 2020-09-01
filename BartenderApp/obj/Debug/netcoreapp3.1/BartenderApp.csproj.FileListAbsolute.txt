@@ -80,3 +80,4 @@ C:\Users\Rachael\source\repos\BartenderApp\BartenderApp\obj\Debug\netcoreapp3.1\
 C:\Users\Rachael\source\repos\BartenderApp\BartenderApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\CartSummary\Default.cshtml.g.cs
 C:\Users\Rachael\source\repos\BartenderApp\BartenderApp\obj\Debug\netcoreapp3.1\Razor\Views\Order\Checkout.cshtml.g.cs
 C:\Users\Rachael\source\repos\BartenderApp\BartenderApp\obj\Debug\netcoreapp3.1\Razor\Views\Order\Completed.cshtml.g.cs
+C:\Users\Rachael\source\repos\BartenderApp\BartenderApp\obj\Debug\netcoreapp3.1\Razor\Views\Order\List.cshtml.g.cs
